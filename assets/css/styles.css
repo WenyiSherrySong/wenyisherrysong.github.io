@@ -147,6 +147,7 @@ a.dotted-link:hover {
   font-size: 38px;
   margin-bottom: 5px;
   margin-top: 30px;
+  text-align: left;
 }
 
 .header .profile-content .desc {
@@ -156,6 +157,7 @@ a.dotted-link:hover {
   font-size: 24px;
   margin-top: 0;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .header .profile-content .social a {
@@ -834,3 +836,48 @@ body[data-theme="dark"] .text-muted {
     max-width: inherit;
   }
 }
+
+/* 确保所有文本左对齐 */
+.profile-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直居中 */
+}
+
+/* 让 info-list 里的图标和文本水平对齐 */
+.info-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* 让每一行有一点间距 */
+}
+
+/* 让每一行的图标和文字对齐 */
+.info-list li {
+  display: grid;
+  grid-template-columns: 24px auto; /* 让图标和文字对齐 */
+  align-items: center; /* 让文字和图标垂直居中 */
+  gap: 10px; /* 图标和文字的间距 */
+}
+
+/* 让图标大小统一，并靠左 */
+.info-list i {
+  min-width: 24px;
+  text-align: left;
+  font-size: 18px; /* 调整大小以确保统一 */
+}
+
+/* 让社交媒体图标左对齐 */
+.social {
+  text-align: left;
+  padding-left: 0;
+}
+
+/* 头像在小屏幕居中，大屏幕左对齐 */
+.profile-image {
+  display: block;
+  margin: auto;
+}
+
